@@ -84,4 +84,34 @@ body {
   color: black;
 }
 
-@media (max)
+@media (max-width: 768px) {
+  .my-grid {
+    grid-template-areas:
+      "header"
+      "main"
+      "aside"
+      "aside2"
+      "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .header,
+  .main,
+  .aside,
+  .aside2,
+  .footer {
+    text-align: center;
+    border: none; /* Remove borders for mobile */
+  }
+
+  .overlay {
+    grid-column: 1 / -1; /* Span all columns */
+    grid-row: 2 / 3; /* Adjust row span */
+    background-color: rgba(38, 255, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+  }
+}
